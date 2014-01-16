@@ -104,26 +104,24 @@
 
     document.body.appendChild(wrapper);
 
-    return list;
+    return wrapper;
   }
 
   function updateUI() {
-    var ui = document.querySelector('#dead-selectors > ul');
-    if (!ui) {
-      ui = initializeUI();
-    }
+    var ui   = document.querySelector('#dead-selectors') || initializeUI(),
+        list = ui.querySelector('ul');
 
-    ui.innerHTML = '';
+    list.innerHTML = '';
 
     var deadSelectorList = Object.keys(deadSelectors);
 
     forEach.call(deadSelectorList, function(deadSelector) {
       var item = document.createElement('LI');
       item.textContent = deadSelector;
-      ui.appendChild(item);
+      list.appendChild(item);
     });
 
-    ui.parentNode.querySelector('p').textContent = deadSelectorList.length;
+    ui.querySelector('p').textContent = deadSelectorList.length;
   }
 
 }());
