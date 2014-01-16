@@ -7,7 +7,7 @@ Drop **6th-css-sense.js** and **6th-css-sense.css** into your web application. P
 want to do this in dev environments; so e.g. for Rails you could have something like this in your
 application layout:
 
-```html
+```erb
 <% if Rails.env.development? -%>
   <%= stylesheet_link_tag("6th-css-sense") %>
   <%= javascript_include_tag("6th-css-sense") %>
