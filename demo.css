@@ -1,11 +1,38 @@
+body {
+  font-size: 150%;
+}
+
+article {
+  margin: auto;
+}
+
+@media all and (min-width: 960px) and (max-width: 1599px) {
+  article {
+    width: 960px;
+  }
+}
+
+@media all and (min-width: 1600px) {
+  article {
+    width: 60%;
+  }
+}
+
 header {
-  font-size: 200%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 150%;
 }
 
 header h1 {
-  font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
-  letter-spacing: -0.1em;
+  letter-spacing: -4px;
+  margin-bottom: 0;
+}
+
+header p {
+  font-weight: 300;
+  letter-spacing: -2px;
+  margin-top: 0;
 }
 
 .dead-selector-in-stylesheet {

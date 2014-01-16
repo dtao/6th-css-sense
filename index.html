@@ -22,17 +22,35 @@
 </head>
 
 <body>
-    <header>
-        <h1>6th CSS Sense</h1>
-        <p>I see dead CSS selectors.</p>
-    </header>
-
-    <style contenteditable="true">/* Try adding some custom CSS! (doesn't work too well in Blink/WebKit) */</style>
+    <a href="https://github.com/dtao/6th-css-sense"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 
     <article>
+        <header>
+            <h1>6th CSS Sense</h1>
+            <p>I see dead CSS selectors.</p>
+        </header>
+
+        <style contenteditable="true">/* Try adding some custom CSS! (doesn't work too well in Blink/WebKit) */</style>
+
         <p>
             This is just a demo to illustrate how this tool detects dead CSS selectors and displays
             them on the page.
+        </p>
+
+        <p>
+            You'll notice the very first time the panel appears at the bottom (after 3 seconds), it
+            will show <code>#dead-selectors</code> and a few other selectors that it thinks are
+            dead, because on the first scan it didn't find these on the page. However, after
+            <em>another</em> 3 seconds it will clear those selectors since they're being used by the
+            very panel on which the results are displayed! This is an example of how this tool helps
+            account for CSS rules that only apply to content that is added dynamically.
+        </p>
+
+        <p>
+            After the panel updates, you should see two selectors that are "dead": one from a
+            stylesheet, and one from <code>&lt;style&gt;</code> element in the HTML of this page.
+            You can also&mdash;in Firefox, at least&mdash;try adding custom CSS in the box above, to
+            add more dead rules for the tool to detect.
         </p>
     </article>
 </body>
