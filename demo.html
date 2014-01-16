@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>6th CSS Sense</title>
+    <link rel="stylesheet" href="6th-css-sense.css" />
+    <link rel="stylesheet" href="demo.css" />
+    <script src="6th-css-sense.js"></script>
+
+    <style type="text/css">
+        style[contenteditable="true"] {
+            display: block;
+            font-family: Inconsolata, Consolas, monospace;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .dead-selector-in-style-element {
+            /* I'm not used! */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>6th CSS Sense</h1>
+        <p>I see dead CSS selectors.</p>
+    </header>
+
+    <style contenteditable="true">/* Go ahead and put some custom CSS in here! */</style>
+
+    <article>
+        <p>
+            This is just a demo to illustrate how this tool detects dead CSS selectors and displays
+            them on the page.
+        </p>
+    </article>
+</body>
+
+</html>
